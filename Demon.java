@@ -24,4 +24,15 @@ public class Demon extends Creature
             Randomizer.nextInt(MAX_DEMON_STR-MIN_DEMON_STR)+MIN_DEMON_STR
         );
     }
+    
+    public int damage()
+    {
+        int magicalDamage;
+        magicalDamage = super.damage();
+        if(Randomizer.nextInt(20)==0){
+            System.out.println("Strength of a Demon!!");
+            magicalDamage +=50;
+        }
+        return magicalDamage;
+    }
 }

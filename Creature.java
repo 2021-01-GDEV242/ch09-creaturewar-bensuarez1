@@ -79,4 +79,8 @@ public abstract class Creature
         // TODO: implement this
     }
     
+    public int damage()
+    {
+        return Randomizer.nextInt(str) + 1;
+    }
 }
