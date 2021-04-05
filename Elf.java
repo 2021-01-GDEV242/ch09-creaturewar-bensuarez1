@@ -24,4 +24,15 @@ public class Elf extends Creature
             Randomizer.nextInt(MAX_ELF_STR-MIN_ELF_STR)+MIN_ELF_STR
         );
     }
+    
+    public int damage()
+    {
+        int magicalDamage;
+        magicalDamage = super.damage();
+        if(Randomizer.nextInt(10)==0){
+            System.out.println("Elf magic!!");
+            magicalDamage *=2;
+        }
+        return magicalDamage;
+    }
 }
