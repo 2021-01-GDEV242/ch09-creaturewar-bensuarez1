@@ -5,8 +5,8 @@ import java.util.Random;
  * from the range 0..limit -1
  * to the range 1..limit
  * 
- * @author Bill Crosbie
- * @version 2020-10 v1.0
+ * @author Ben Suarez
+ * @version 2021-4-4 v1.0
  */
 public class Randomizer
 {

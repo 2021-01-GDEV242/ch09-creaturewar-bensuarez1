@@ -2,8 +2,8 @@
 /**
  * Write a description of class CyberDemon here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Ben Suarez
+ * @version 2021-4-4 v1.0
  */
 public class CyberDemon extends Demon
 {
