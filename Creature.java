@@ -37,9 +37,10 @@ public abstract class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       //implement this
+       this.str = str;
+       this.hp = hp;
+       max_hp = hp;
     }
-    
     
     /**
      * Allows a creature to determine how much damage it is causing in this round of battle
@@ -69,18 +70,23 @@ public abstract class Creature
         return false; //change this
     }
     
-    
     /**
      * takeDamage receives a value for the amount of damage to subtract from 
      * the current total of hit points
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp -= damage;
     }
     
     public int damage()
     {
         return Randomizer.nextInt(str) + 1;
+    }
+    
+    public int getHealth()
+    {
+        int healthHolder = hp;
+        return healthHolder;
     }
 }
