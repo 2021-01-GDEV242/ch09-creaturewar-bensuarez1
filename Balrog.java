@@ -21,4 +21,9 @@ public class Balrog extends Demon
         // initialise instance variables
         super();
     }
+    
+    public int damage()
+    {
+        return super.damage() + super.damage();
+    }
 }
