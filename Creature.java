@@ -7,8 +7,8 @@
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
- * @version 2020-10 v1.0
+ * @author Ben Suarez
+ * @version 2021-4-4 v1.0
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -37,27 +37,25 @@ public abstract class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       //implement this
+       this.str = str;
+       this.hp = hp;
+       max_hp = hp;
     }
-    
     
     /**
      * Allows a creature to determine how much damage it is causing in this round of battle
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        return damage();
     }
-    
     
     /**
      * Is this creature still capable of fighting?
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return false; //change this
+        return hp > 0;
     }
     
     /**
@@ -65,10 +63,8 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        return !isAlive();
     }
-    
     
     /**
      * takeDamage receives a value for the amount of damage to subtract from 
@@ -76,7 +72,25 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp -= damage;
     }
     
+    /**
+     * damage gives the amount of damage caused by Creature
+     * @return a random number between 1 and strength
+     */
+    public int damage()
+    {
+        return Randomizer.nextInt(str) + 1;
+    }
+    
+    /**
+     * getHealth receives the current value of Creature's HP.
+     * @return number of HP in private field.
+     */
+    public int getHealth()
+    {
+        int healthHolder = hp;
+        return healthHolder;
+    }
 }
