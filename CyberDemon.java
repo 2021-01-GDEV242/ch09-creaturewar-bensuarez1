@@ -14,11 +14,12 @@ public class CyberDemon extends Demon
     private static final int MIN_CYBERDEMON_STR = 20;
 
     /**
-     * Constructor for objects of class CyberDemon
+     * The instantiating class asks for a CyberDemon and the cyber demon class is responsible for
+     * return a CyberDemon object with values in the appropriate range
      */
     public CyberDemon()
     {
         // initialise instance variables
-        super();
+       super();
     }
 }
