@@ -14,7 +14,8 @@ public class Elf extends Creature
     private static final int MIN_ELF_STR = 5;
 
     /**
-     * Constructor for objects of class Elf
+     * The instantiating class asks for a Human and the human class is responsible for
+     * return a Human object with values in the appropriate range
      */
     public Elf()
     {
@@ -25,6 +26,10 @@ public class Elf extends Creature
         );
     }
     
+    /**
+     * damage() represents Elf's 10% chance to do magical damage.
+     * @return damage count if magical damage activates.
+     */
     public int damage()
     {
         int magicalDamage;

@@ -13,7 +13,8 @@ public class War
     private ArrayList<Creature> armyTwo = new ArrayList<Creature>();
 
     /**
-     * Constructor for objects of class War
+     * Constructor for objects of class War - consisting of the fight, and the creation of both armies
+     * return a War object with all values that represent the battle simulation.
      */
     public War()
     {
@@ -24,10 +25,8 @@ public class War
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * CreateArmyOne - The overall creation of the first army.
+     * @param numberOfCreatures the total number of creatures in the first army.
      */
     private void CreateArmyOne(int numberOfCreatures)
     {
@@ -46,6 +45,10 @@ public class War
         }
     }
     
+    /**
+     * CreateArmyTwo - The overall creation of the second army.
+     * @param numberOfCreatures the total number of creatures in the second army.
+     */
     private void CreateArmyTwo(int numberOfCreatures)
     {
         // put your code here
@@ -64,6 +67,10 @@ public class War
         }
     }
     
+    /**
+     * Fight - The overall code for the battle simulation betwen the two armies.
+     * returns the victor (or draw) from the war.
+     */
     public void Fight()
     {
         Creature armyOneCreature = null;

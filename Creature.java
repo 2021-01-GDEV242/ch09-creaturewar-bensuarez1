@@ -75,11 +75,19 @@ public abstract class Creature
         hp -= damage;
     }
     
+    /**
+     * damage gives the amount of damage caused by Creature
+     * @return a random number between 1 and strength
+     */
     public int damage()
     {
         return Randomizer.nextInt(str) + 1;
     }
     
+    /**
+     * getHealth receives the current value of Creature's HP.
+     * @return number of HP in private field.
+     */
     public int getHealth()
     {
         int healthHolder = hp;

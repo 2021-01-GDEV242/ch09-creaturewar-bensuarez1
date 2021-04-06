@@ -14,7 +14,8 @@ public class Demon extends Creature
     private static final int MIN_DEMON_STR = 25;
 
     /**
-     * Constructor for objects of class Demon
+     * The instantiating class asks for a Demon and the demon class is responsible for
+     * return a Demon object with values in the appropriate range
      */
     public Demon()
     {
@@ -25,6 +26,10 @@ public class Demon extends Creature
         );
     }
     
+    /**
+     * damage() represents Demon's 10% chance to do magical damage,
+     * @return damage count if magical damage activates.
+     */
     public int damage()
     {
         int magicalDamage;

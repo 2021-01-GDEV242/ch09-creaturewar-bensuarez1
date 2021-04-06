@@ -14,7 +14,8 @@ public class Balrog extends Demon
     private static final int MIN_BALROG_STR = 20;
 
     /**
-     * Constructor for objects of class Balrog
+     * The instantiating class asks for a Balrog and the balrog class is responsible for
+     * return a Balrog object with values in the appropriate range
      */
     public Balrog()
     {
@@ -22,6 +23,10 @@ public class Balrog extends Demon
         super();
     }
     
+    /**
+     * damage() represents Balrog's double attack for each round.
+     * @return damage count after Balrog attacks twice.
+     */
     public int damage()
     {
         return super.damage() + super.damage();
